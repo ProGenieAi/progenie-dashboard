@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="he">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>ProGenie — Founder Dashboard</title>
+<title>ProGenie — לוח בקרה למייסד</title>
 <style>
   :root {
     --bg: #0b0d12;
@@ -20,11 +20,13 @@
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    font-family: "Segoe UI", Arial, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     background: var(--bg);
     color: var(--text);
     padding: 24px;
-    line-height: 1.5;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: right;
   }
   h1 { font-size: 22px; margin: 0 0 4px 0; }
   .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
@@ -55,11 +57,12 @@
     font-weight: 600;
   }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  td { padding: 6px 4px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  td { padding: 6px 4px; border-bottom: 1px solid var(--border); vertical-align: top; text-align: right; }
   tr:last-child td { border-bottom: none; }
-  .mono { font-family: "SF Mono", Consolas, monospace; color: var(--muted); white-space: nowrap; }
+  .mono { font-family: "SF Mono", Consolas, monospace; color: var(--muted); white-space: nowrap; direction: ltr; text-align: right; unicode-bidi: embed; }
   .tile-row {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     gap: 12px;
     padding: 7px 0;
@@ -93,7 +96,8 @@
     margin-top: 8px;
     padding: 10px;
     background: rgba(124,108,240,0.06);
-    border-left: 3px solid var(--accent);
+    border-right: 3px solid var(--accent);
+    border-left: none;
     border-radius: 4px;
   }
   .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -104,103 +108,107 @@
 </head>
 <body>
 
-<h1>ProGenie — Founder Dashboard</h1>
-<div class="subtitle">generated at 2026-07-06 09:30:33 UTC · source: repo persistent trail, not a live process watch</div>
+<h1>ProGenie — לוח בקרה למייסד</h1>
+<div class="subtitle">נוצר בשעה 2026-07-06 09:40:49 UTC · המקור: היסטוריית הריפו, לא ניטור תהליכים חי</div>
 
 <div class="grid">
 
   <div class="section">
-    <h2>✅ Shipped today <span class="count-badge">6</span></h2>
-    <table><tbody><tr><td class="mono">12:30</td><td class="mono">62b1bbf</td><td>security: fail-closed redaction for public founder dashboard (Cipher red-team fix)</td></tr>
+    <h2>✅ נשלח היום <span class="count-badge">10</span></h2>
+    <table><tbody><tr><td class="mono">12:40</td><td class="mono">241d483</td><td>docs(dashboard-spec): restore Hebrew/RTL language rule note (lost in a concurrent working-tree overwrite)</td></tr>
+<tr><td class="mono">12:39</td><td class="mono">8da1b53</td><td>feat(dashboard): render founder dashboard in Hebrew, RTL layout</td></tr>
+<tr><td class="mono">12:34</td><td class="mono">73e239c</td><td>feat(schedules): per-agent DAILY OPERATING SCHEDULE — 33 agents modeled on real employee workdays</td></tr>
+<tr><td class="mono">12:34</td><td class="mono">285d927</td><td>design(team): AGENT-VERIFICATION-LAYER — sampling+gating, not per-action review (Sage)</td></tr>
+<tr><td class="mono">12:30</td><td class="mono">62b1bbf</td><td>security: fail-closed redaction for public founder dashboard (Cipher red-team fix)</td></tr>
 <tr><td class="mono">09:14</td><td class="mono">9a29c9f</td><td>feat(weekly-review): Review #1 — MODE-A (Compass+Hone+Sage), delegation coverage 13%→43.5%</td></tr>
 <tr><td class="mono">12:16</td><td class="mono">a209cba</td><td>feat(dashboard): persistent self-updating founder dashboard, live on GitHub Pages</td></tr>
 <tr><td class="mono">12:08</td><td class="mono">9c3e05b</td><td>fix(weekly-review): add 7-day grace window before DELETE — don't kill just-created agents</td></tr>
 <tr><td class="mono">12:03</td><td class="mono">4941fed</td><td>chore(routines): weekly-structural-review live ([redacted], SECRET-LIGHT verified)</td></tr>
 <tr><td class="mono">12:02</td><td class="mono">1bc5180</td><td>feat(routine): weekly-structural-review — consolidate Compass+Hone+Sage into one MODE-A truth-loop</td></tr></tbody></table>
-    <div class="honesty-note">Source: <code>git log --since=midnight-UTC --no-merges</code>, [skip ci] commits filtered out.</div>
+    <div class="honesty-note">מקור: <code>git log --since=midnight-UTC --no-merges</code>, קומיטים מסוג [skip ci] מסוננים.</div>
   </div>
 
   <div class="section">
-    <h2>🟢 Live now (posting channels)</h2>
+    <h2>🟢 חי עכשיו (ערוצי פרסום)</h2>
     <div class="tile-row"><span>X (Twitter)</span><span class="tag ok">1 posted today · 37 all-time · 48 queued</span></div>
 <div class="tile-row"><span>Facebook</span><span class="tag ok">0 posted today · 12 all-time · 8 queued</span></div>
-    <div style="margin-top:10px; font-size:12px; color:var(--muted);">Wired auto-posters (workflow files present on disk):</div>
+    <div style="margin-top:10px; font-size:12px; color:var(--muted);">מפרסמים אוטומטיים מחוברים (קבצי workflow קיימים בדיסק):</div>
     <div class="tile-row"><span>X Spread (GitHub Actions, 3x/day)</span><span class="tag ok">wired (.github/workflows/x-spread.yml)</span></div>
 <div class="tile-row"><span>FB Spread (GitHub Actions)</span><span class="tag ok">wired (.github/workflows/fb-spread.yml)</span></div>
 <div class="tile-row"><span>Reply-Raid poster</span><span class="tag ok">wired (.github/workflows/reply-raid.yml)</span></div>
 <div class="tile-row"><span>Heartbeat Responder (relationships)</span><span class="tag ok">wired (.github/workflows/heartbeat-respond.yml)</span></div>
 <div class="tile-row"><span>Heartbeat Sense (inbox intake)</span><span class="tag ok">wired (.github/workflows/heartbeat-sense.yml)</span></div>
-    <div class="honesty-note">"Live" here means: a GitHub Actions workflow file exists and queue files show real [POSTED] entries — not a live process being polled right now (there is none; agents are ephemeral spawns).</div>
+    <div class="honesty-note">"חי" כאן פירושו: קובץ workflow של GitHub Actions קיים וקבצי התור מראים רשומות [POSTED] אמיתיות — לא תהליך חי שנבדק ברגע זה (אין כזה; הסוכנים הם הפעלות חד-פעמיות).</div>
   </div>
 
   <div class="section">
-    <h2>🔄 Auto-running / queued <span class="count-badge">19</span></h2>
-    <table><tbody><tr><td>Morning Dispatch / Daily Workday (09:00 IL)</td><td class="mono">0 6 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Evening Report / Brainstorm (17:33 IL)</td><td class="mono">0 14 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Sage AI-News Scan (07:00 IL)</td><td class="mono">0 4 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Sage Daily Team Upskill (08:00 IL)</td><td class="mono">0 5 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Autonomy Engine + Corridor Talk (12:00 IL)</td><td class="mono">0 10 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Daily Council Debate (15:01 IL)</td><td class="mono">1 12 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Agent Standup / Memory Loop (19:00 IL)</td><td class="mono">0 16 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Health Check + Pager (23:00 IL) — runs via GitHub Actions, not RemoteTrigger</td><td class="mono">0 20 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>The Lookout — world scan + evolve POV (11:00 IL)</td><td class="mono">0 8 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Relationship Engine / Email+X Responder (hourly :17)</td><td class="mono">17 * * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Ideas Lab (Sun/Tue/Thu 10:00 IL)</td><td class="mono">0 7 0,2,4 * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Deep Research KB Builder (15:00 IL)</td><td class="mono">0 12 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Canon Audit — Weekly DNA Integrity Check</td><td class="mono">weekly (exact schedule defined in live RemoteTrigger)</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Heartbeat Responder — Draft INBOX to REPLY-QUEUE</td><td class="mono">schedule defined in live RemoteTrigger</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Engage — Reply-Raid High-Traction Posts (2x/day)</td><td class="mono">2x/day (times defined in live RemoteTrigger)</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Spread — Auto-Post to X (3x/day, Natural Spacing)</td><td class="mono">3x/day ~4h apart (times defined in live RemoteTrigger)</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>X SPREAD (Afternoon) Diagnostic — DISABLED</td><td class="mono">N/A — DISABLED</td><td><span class="tag na">disabled</span></td></tr>
-<tr><td>WANTS-BEAT — Self-Interest Engine (cloud, PC-OFF equivalent of scripts/wants-wake.sh)</td><td class="mono">4 9 * * *</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>Product Drift Audit — Weekly Essence-Alignment Check on the LIVE Product</td><td class="mono">weekly (piggybacking canon-audit's live cron until a dedicated trigger exists)</td><td><span class="tag ok">active</span></td></tr>
-<tr><td>X SPREAD (Noon) Diagnostic — DISABLED</td><td class="mono">N/A — DISABLED</td><td><span class="tag na">disabled</span></td></tr>
-<tr><td>Weekly Structural Review — truth-loop (Compass focus + Hone delegation-audit + Sage team-focus, real MODE-A)</td><td class="mono">13 10 * * 0 (weekly Sunday 10:13 UTC)</td><td><span class="tag ok">active</span></td></tr></tbody></table>
+    <h2>🔄 רץ אוטומטית / בתור <span class="count-badge">19</span></h2>
+    <table><tbody><tr><td>Morning Dispatch / Daily Workday (09:00 IL)</td><td class="mono">0 6 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Evening Report / Brainstorm (17:33 IL)</td><td class="mono">0 14 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Sage AI-News Scan (07:00 IL)</td><td class="mono">0 4 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Sage Daily Team Upskill (08:00 IL)</td><td class="mono">0 5 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Autonomy Engine + Corridor Talk (12:00 IL)</td><td class="mono">0 10 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Daily Council Debate (15:01 IL)</td><td class="mono">1 12 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Agent Standup / Memory Loop (19:00 IL)</td><td class="mono">0 16 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Health Check + Pager (23:00 IL) — runs via GitHub Actions, not RemoteTrigger</td><td class="mono">0 20 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>The Lookout — world scan + evolve POV (11:00 IL)</td><td class="mono">0 8 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Relationship Engine / Email+X Responder (hourly :17)</td><td class="mono">17 * * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Ideas Lab (Sun/Tue/Thu 10:00 IL)</td><td class="mono">0 7 0,2,4 * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Deep Research KB Builder (15:00 IL)</td><td class="mono">0 12 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Canon Audit — Weekly DNA Integrity Check</td><td class="mono">weekly (exact schedule defined in live RemoteTrigger)</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Heartbeat Responder — Draft INBOX to REPLY-QUEUE</td><td class="mono">schedule defined in live RemoteTrigger</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Engage — Reply-Raid High-Traction Posts (2x/day)</td><td class="mono">2x/day (times defined in live RemoteTrigger)</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Spread — Auto-Post to X (3x/day, Natural Spacing)</td><td class="mono">3x/day ~4h apart (times defined in live RemoteTrigger)</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>X SPREAD (Afternoon) Diagnostic — DISABLED</td><td class="mono">N/A — DISABLED</td><td><span class="tag na">מושבת</span></td></tr>
+<tr><td>WANTS-BEAT — Self-Interest Engine (cloud, PC-OFF equivalent of scripts/wants-wake.sh)</td><td class="mono">4 9 * * *</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>Product Drift Audit — Weekly Essence-Alignment Check on the LIVE Product</td><td class="mono">weekly (piggybacking canon-audit's live cron until a dedicated trigger exists)</td><td><span class="tag ok">פעיל</span></td></tr>
+<tr><td>X SPREAD (Noon) Diagnostic — DISABLED</td><td class="mono">N/A — DISABLED</td><td><span class="tag na">מושבת</span></td></tr>
+<tr><td>Weekly Structural Review — truth-loop (Compass focus + Hone delegation-audit + Sage team-focus, real MODE-A)</td><td class="mono">13 10 * * 0 (weekly Sunday 10:13 UTC)</td><td><span class="tag ok">פעיל</span></td></tr></tbody></table>
     <div class="stat-grid" style="margin-top:12px;">
-      <div class="stat"><div class="label">X queue backlog</div><div class="value">48</div></div>
-      <div class="stat"><div class="label">FB queue backlog</div><div class="value">8</div></div>
+      <div class="stat"><div class="label">תור X (טוויטר) ממתין</div><div class="value">48</div></div>
+      <div class="stat"><div class="label">תור פייסבוק ממתין</div><div class="value">8</div></div>
     </div>
-    <div class="tile-row" style="margin-top:10px;"><span>Last system health check</span><span class="tag ok">2026-07-05: 🟢 ALL GREEN (7/7) — ✅ ✅ ✅ ✅ ✅ ✅ ✅</span></div>
-    <div class="honesty-note">Source: <code>Nexus/routines/_manifest.json</code> (scheduled cloud routines) + [QUEUED] item counts in X/FB queue files + <code>Nexus/logs/HEALTH-LOG.md</code> (whether routines' expected outputs actually appeared, not just "scheduled"). 2 routine(s) marked disabled in the manifest. "Active" below means scheduled — cross-check the health line for verified firing.</div>
+    <div class="tile-row" style="margin-top:10px;"><span>בדיקת תקינות אחרונה של המערכת</span><span class="tag ok">2026-07-05: 🟢 ALL GREEN (7/7) — ✅ ✅ ✅ ✅ ✅ ✅ ✅</span></div>
+    <div class="honesty-note">מקור: <code>Nexus/routines/_manifest.json</code> (רוטינות מתוזמנות בענן) + ספירת פריטי [QUEUED] בקבצי התור של X/FB + <code>Nexus/logs/HEALTH-LOG.md</code> (האם הפלט הצפוי של הרוטינה אכן הופיע, לא רק "מתוזמן"). 2 רוטינה/ות מסומנות כמושבתות ב-manifest. "פעיל" למטה פירושו מתוזמן — יש להצליב מול שורת התקינות לאימות הפעלה בפועל.</div>
   </div>
 
   <div class="section">
-    <h2>🖐️ Needs you <span class="count-badge">3</span></h2>
-    <div class="tile-row"><span>3 engineering items flagged for founder</span><span class="tag src">details in private brain</span></div>
-    <div class="honesty-note">Source: <code>FLAG-FOUNDER</code> markers scanned from <code>Nexus/HANDOFF.md</code>. Only money/spend and physical account-setup (login/OAuth/CAPTCHA) ever gate — everything else runs autonomously per house rule.</div>
+    <h2>🖐️ מחכה לך <span class="count-badge">3</span></h2>
+    <div class="tile-row"><span>3 נושא/י הנדסה מסומנים למייסד</span><span class="tag src">פרטים בבריין הפרטי</span></div>
+    <div class="honesty-note">מקור: סימוני <code>FLAG-FOUNDER</code> שנסרקו מ-<code>Nexus/HANDOFF.md</code>. רק הוצאות כסף והגדרות חשבון פיזיות (התחברות/OAuth/CAPTCHA) חוסמות — כל השאר רץ באופן אוטונומי לפי מדיניות הבית.</div>
   </div>
 
   <div class="section">
-    <h2>📊 Honest numbers</h2>
+    <h2>📊 מספרים — האמת בלי לרכך</h2>
     <div class="stat-grid">
       <div class="stat">
-        <div class="label">Latest reach (X) <span class="tag warn">⚠️ instrument-unverified</span></div>
+        <div class="label">הגעה אחרונה (X) <span class="tag warn">⚠️ המכשור לא מאומת</span></div>
         <div class="value" style="font-size:13px; font-weight:500;">2026-07-05: 20 tweets | impressions 0 | profile_clicks 0 | link_clicks 0 | CTR→profile 0.00% | (likes 6, not a KPI)</div>
-        <div style="font-size:11px; color:var(--warn); margin-top:4px;">0 impressions with &gt;0 likes on the same row is a physical impossibility — the impressions reader is suspected buggy until re-verified against a live API call. Not rendered as a clean number.</div>
+        <div style="font-size:11px; color:var(--warn); margin-top:4px;">0 חשיפות עם יותר מ-0 לייקים באותה שורה זו בלתי אפשרי פיזית — קורא החשיפות חשוד כתקול עד לאימות מול קריאת API חיה. לא מוצג כמספר נקי.</div>
       </div>
       <div class="stat">
-        <div class="label">Gatekeeper record (all-time)</div>
+        <div class="label">רשומת שוער (כל הזמנים)</div>
         <div class="value" style="font-size:15px;">163 PASS / 31 REJECT</div>
       </div>
       <div class="stat">
-        <div class="label">Forecast scorecard</div>
+        <div class="label">לוח תחזיות</div>
         <div class="value" style="font-size:15px;">0–0 (6 open)</div>
       </div>
       <div class="stat">
-        <div class="label">Gumroad sales</div>
-        <div class="value" style="font-size:13px; color:var(--na);">n/a — needs credential (GUMROAD_TOKEN not read by this generator)</div>
+        <div class="label">מכירות Gumroad</div>
+        <div class="value" style="font-size:13px; color:var(--na);">אין נתונים — נדרש credential (GUMROAD_TOKEN לא נקרא ע"י המחולל הזה)</div>
       </div>
     </div>
-    <div class="honesty-note">No fabricated "live" numbers. Anything this generator can't read from a repo file (e.g. Gumroad sales, which need <code>GUMROAD_TOKEN</code>) is marked "n/a — needs credential", never guessed.</div>
+    <div class="honesty-note">אין מספרים "חיים" מומצאים. כל דבר שהמחולל לא מצליח לקרוא מקובץ בריפו (למשל מכירות Gumroad, שדורשות <code>GUMROAD_TOKEN</code>) מסומן "אין נתונים — נדרש credential", לעולם לא ניחוש.</div>
   </div>
 
 </div>
 
 <div class="footer">
-  Generated by <code>Nexus/products/PORTFOLIO/scripts/founder_dashboard.cjs</code> — regenerates hourly via GitHub Actions and commits back to the repo.
-  This page has no backend and calls no APIs at view-time; everything on it was baked in at generation time from the repo's own history.
+  נוצר על ידי <code>Nexus/products/PORTFOLIO/scripts/founder_dashboard.cjs</code> — מתחדש כל שעה דרך GitHub Actions ונשמר בריפו.
+  לעמוד הזה אין backend והוא לא קורא ל-API בזמן הצפייה; כל מה שמוצג נאפה בזמן היצירה מתוך היסטוריית הריפו עצמה.
   <br><br>
-  <strong>Agents are ephemeral spawns with no persistent running process — there is no live activity monitor to build.</strong> This page cannot honestly tell you which agent is writing right now. What it CAN honestly tell you is "here's what shipped, here's what's queued, here's what's still open" — the persistent trail, not a live process watch.
+  <strong>הסוכנים הם הפעלות חד-פעמיות ללא תהליך רץ קבוע — אין ניטור פעילות חי לבנות.</strong> העמוד הזה לא יכול לומר לך בכנות איזה סוכן כותב ברגע זה. מה שכן ניתן לומר בכנות זה "הנה מה שנשלח, הנה מה שבתור, הנה מה שעדיין פתוח" — עקבות מתמשכות, לא ניטור תהליך חי.
 </div>
 
 </body>
