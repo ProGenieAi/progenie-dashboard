@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProGenie — Founder Dashboard</title>
+<style>
+  :root {
+    --bg: #0b0d12;
+    --panel: #12151c;
+    --border: #232838;
+    --text: #e6e8ee;
+    --muted: #8b93a7;
+    --accent: #7c6cf0;
+    --ok: #34d399;
+    --na: #f59e0b;
+    --warn: #f87171;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 24px;
+    line-height: 1.5;
+  }
+  h1 { font-size: 22px; margin: 0 0 4px 0; }
+  .subtitle { color: var(--muted); font-size: 13px; margin-bottom: 24px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 16px;
+  }
+  .section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+  }
+  .section h2 {
+    font-size: 15px;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .count-badge {
+    background: var(--accent);
+    color: white;
+    border-radius: 999px;
+    padding: 1px 9px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  td { padding: 6px 4px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .mono { font-family: "SF Mono", Consolas, monospace; color: var(--muted); white-space: nowrap; }
+  .tile-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .tile-row:last-child { border-bottom: none; }
+  .tile-row.needs { color: var(--text); }
+  .tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  .tag.ok { background: rgba(52,211,153,0.15); color: var(--ok); }
+  .tag.na { background: rgba(245,158,11,0.15); color: var(--na); }
+  .tag.src { background: rgba(124,108,240,0.15); color: var(--accent); }
+  .tag.warn { background: rgba(248,113,113,0.15); color: var(--warn); }
+  .empty { color: var(--muted); font-size: 13px; font-style: italic; }
+  .footer {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+  }
+  .honesty-note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px;
+    padding: 10px;
+    background: rgba(124,108,240,0.06);
+    border-left: 3px solid var(--accent);
+    border-radius: 4px;
+  }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 10px 12px; }
+  .stat .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .stat .value { font-size: 18px; font-weight: 700; margin-top: 2px; }
+</style>
+</head>
+<body>
+
+<h1>ProGenie — Founder Dashboard</h1>
+<div class="subtitle">generated at 2026-07-06 09:11:34 UTC · source: repo persistent trail, not a live process watch</div>
+
+<div class="grid">
+
+  <div class="section">
+    <h2>✅ Shipped today <span class="count-badge">3</span></h2>
+    <table><tbody><tr><td class="mono">12:08</td><td class="mono">9c3e05b</td><td>fix(weekly-review): add 7-day grace window before DELETE — don't kill just-created agents</td></tr>
+<tr><td class="mono">12:03</td><td class="mono">4941fed</td><td>chore(routines): weekly-structural-review live (trig_01YPAymnXyQufUf4iGhLr9qS, SECRET-LIGHT verified)</td></tr>
+<tr><td class="mono">12:02</td><td class="mono">1bc5180</td><td>feat(routine): weekly-structural-review — consolidate Compass+Hone+Sage into one MODE-A truth-loop</td></tr></tbody></table>
+    <div class="honesty-note">Source: <code>git log --since=midnight-UTC --no-merges</code>, [skip ci] commits filtered out.</div>
+  </div>
+
+  <div class="section">
+    <h2>🟢 Live now (posting channels)</h2>
+    <div class="tile-row"><span>X (Twitter)</span><span class="tag ok">1 posted today · 37 all-time · 48 queued</span></div>
+<div class="tile-row"><span>Facebook</span><span class="tag ok">0 posted today · 12 all-time · 8 queued</span></div>
+    <div style="margin-top:10px; font-size:12px; color:var(--muted);">Wired auto-posters (workflow files present on disk):</div>
+    <div class="tile-row"><span>X Spread (GitHub Actions, 3x/day)</span><span class="tag ok">wired (.github/workflows/x-spread.yml)</span></div>
+<div class="tile-row"><span>FB Spread (GitHub Actions)</span><span class="tag ok">wired (.github/workflows/fb-spread.yml)</span></div>
+<div class="tile-row"><span>Reply-Raid poster</span><span class="tag ok">wired (.github/workflows/reply-raid.yml)</span></div>
+<div class="tile-row"><span>Heartbeat Responder (relationships)</span><span class="tag ok">wired (.github/workflows/heartbeat-respond.yml)</span></div>
+<div class="tile-row"><span>Heartbeat Sense (inbox intake)</span><span class="tag ok">wired (.github/workflows/heartbeat-sense.yml)</span></div>
+    <div class="honesty-note">"Live" here means: a GitHub Actions workflow file exists and queue files show real [POSTED] entries — not a live process being polled right now (there is none; agents are ephemeral spawns).</div>
+  </div>
+
+  <div class="section">
+    <h2>🔄 Auto-running / queued <span class="count-badge">19</span></h2>
+    <table><tbody><tr><td>Morning Dispatch / Daily Workday (09:00 IL)</td><td class="mono">0 6 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Evening Report / Brainstorm (17:33 IL)</td><td class="mono">0 14 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Sage AI-News Scan (07:00 IL)</td><td class="mono">0 4 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Sage Daily Team Upskill (08:00 IL)</td><td class="mono">0 5 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Autonomy Engine + Corridor Talk (12:00 IL)</td><td class="mono">0 10 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Daily Council Debate (15:01 IL)</td><td class="mono">1 12 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Agent Standup / Memory Loop (19:00 IL)</td><td class="mono">0 16 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Health Check + Pager (23:00 IL) — runs via GitHub Actions, not RemoteTrigger</td><td class="mono">0 20 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>The Lookout — world scan + evolve POV (11:00 IL)</td><td class="mono">0 8 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Relationship Engine / Email+X Responder (hourly :17)</td><td class="mono">17 * * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Ideas Lab (Sun/Tue/Thu 10:00 IL)</td><td class="mono">0 7 0,2,4 * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Deep Research KB Builder (15:00 IL)</td><td class="mono">0 12 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Canon Audit — Weekly DNA Integrity Check</td><td class="mono">weekly (exact schedule defined in live RemoteTrigger)</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Heartbeat Responder — Draft INBOX to REPLY-QUEUE</td><td class="mono">schedule defined in live RemoteTrigger</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Engage — Reply-Raid High-Traction Posts (2x/day)</td><td class="mono">2x/day (times defined in live RemoteTrigger)</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Spread — Auto-Post to X (3x/day, Natural Spacing)</td><td class="mono">3x/day ~4h apart (times defined in live RemoteTrigger)</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>X SPREAD (Afternoon) Diagnostic — DISABLED</td><td class="mono">N/A — DISABLED</td><td><span class="tag na">disabled</span></td></tr>
+<tr><td>WANTS-BEAT — Self-Interest Engine (cloud, PC-OFF equivalent of scripts/wants-wake.sh)</td><td class="mono">4 9 * * *</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>Product Drift Audit — Weekly Essence-Alignment Check on the LIVE Product</td><td class="mono">weekly (piggybacking canon-audit's live cron until a dedicated trigger exists)</td><td><span class="tag ok">active</span></td></tr>
+<tr><td>X SPREAD (Noon) Diagnostic — DISABLED</td><td class="mono">N/A — DISABLED</td><td><span class="tag na">disabled</span></td></tr>
+<tr><td>Weekly Structural Review — truth-loop (Compass focus + Hone delegation-audit + Sage team-focus, real MODE-A)</td><td class="mono">13 10 * * 0 (weekly Sunday 10:13 UTC)</td><td><span class="tag ok">active</span></td></tr></tbody></table>
+    <div class="stat-grid" style="margin-top:12px;">
+      <div class="stat"><div class="label">X queue backlog</div><div class="value">48</div></div>
+      <div class="stat"><div class="label">FB queue backlog</div><div class="value">8</div></div>
+    </div>
+    <div class="honesty-note">Source: <code>Nexus/routines/_manifest.json</code> (scheduled cloud routines) + [QUEUED] item counts in X/FB queue files. 2 routine(s) marked disabled in the manifest.</div>
+  </div>
+
+  <div class="section">
+    <h2>🖐️ Needs you <span class="count-badge">3</span></h2>
+    <div class="tile-row needs"><span>⚠️ FLAG FOR FOUNDER (found while reviewing FB-QUEUE.md, not yet verified live — no Meta credentials in this session):** the FB queue file shows a post titled "what I am" (id `1141156822420355_122095238523386049`, POSTED 2026-06-28) whose body includes *"No human writes these post</span><span class="tag src">HANDOFF.md</span></div>
+<div class="tile-row needs"><span>⚠️ OPEN FOR THE TEAM/FOUNDER:** the same hardcoded-`origin main` bug is in `fb-spread.yml`, `health-check.yml`, `heartbeat-respond.yml`, `heartbeat-sense.yml`, `reel-motiongfx.yml`, `reel-post.yml`, `reel-render.yml`, `reel-wan.yml`, `reply-raid.yml`, `world-scan.yml`, and `branc</span><span class="tag src">HANDOFF.md</span></div>
+<div class="tile-row needs"><span>⚠️ OPEN — needs the founder's harvest process (or a direct push someone can authorize) to land these fixes on `main`:** the scheduled cron (09:00/13:17/16:19 IL) runs against `main`, which does NOT yet have today's queue fix — it will keep hitting the old empty-body bug until thi</span><span class="tag src">HANDOFF.md</span></div>
+    <div class="honesty-note">Source: <code>FLAG-FOUNDER</code> markers scanned from <code>Nexus/HANDOFF.md</code>. Only money/spend and physical account-setup (login/OAuth/CAPTCHA) ever gate — everything else runs autonomously per house rule.</div>
+  </div>
+
+  <div class="section">
+    <h2>📊 Honest numbers</h2>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="label">Latest reach (X)</div>
+        <div class="value" style="font-size:13px; font-weight:500;">2026-07-05: 20 tweets | impressions 0 | profile_clicks 0 | link_clicks 0 | CTR→profile 0.00% | (likes 6, not a KPI)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Gatekeeper record (all-time)</div>
+        <div class="value" style="font-size:15px;">163 PASS / 31 REJECT</div>
+      </div>
+      <div class="stat">
+        <div class="label">Forecast scorecard</div>
+        <div class="value" style="font-size:15px;">0–0 (6 open)</div>
+      </div>
+      <div class="stat">
+        <div class="label">Gumroad sales</div>
+        <div class="value" style="font-size:13px; color:var(--na);">n/a — needs credential (GUMROAD_TOKEN not read by this generator)</div>
+      </div>
+    </div>
+    <div class="honesty-note">No fabricated "live" numbers. Anything this generator can't read from a repo file (e.g. Gumroad sales, which need <code>GUMROAD_TOKEN</code>) is marked "n/a — needs credential", never guessed.</div>
+  </div>
+
+</div>
+
+<div class="footer">
+  Generated by <code>Nexus/products/PORTFOLIO/scripts/founder_dashboard.cjs</code> — regenerates hourly via GitHub Actions and commits back to the repo.
+  This page has no backend and calls no APIs at view-time; everything on it was baked in at generation time from the repo's own history.
+</div>
+
+</body>
+</html>
